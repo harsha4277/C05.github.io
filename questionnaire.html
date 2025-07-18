@@ -19,7 +19,7 @@
 </div>
 <header>
   <nav>
-    <a href="index.html">Index</a>
+    <a href="home.html">Index</a>
    
     <a href="abstract.html">Abstract</a>
     <a href="introduction.html">Introduction</a>
@@ -33,30 +33,27 @@
   </nav>
 </header>
 <main>
-  <section class="section fade-in">
-    <h2>Questionnaire</h2>
-    <p>Our questionnaire covered basic awareness questions about safe drinking water facilities. Questions were asked in local languages and recorded honestly. The feedback was helpful to understand gaps in awareness.</p>
-    <img src="https://cdn-icons-png.flaticon.com/512/2913/2913461.png" alt="Questionnaire Illustration" style="width:120px;height:120px;display:block;margin:24px auto 0 auto;">
-  </section>
-  <section class="section fade-in">
-    <h3>Sample Survey Questions</h3>
-    <ul>
-      <li>Do you know the source of your household drinking water?</li>
-      <li>How often do you test or check the quality of your drinking water?</li>
-      <li>Are you aware of any purification methods for making water safe?</li>
-      <li>Have you or your family experienced waterborne illnesses in the past year?</li>
-      <li>What storage methods do you use for drinking water at home?</li>
-      <li>Would you be interested in community workshops on water safety?</li>
-    </ul>
-  </section>
-  <section class="section fade-in">
-    <h3>How We Conducted the Survey</h3>
-    <p>Our team visited households and community centers, asking questions in the local language to ensure clarity and comfort. Responses were recorded anonymously and used to identify key areas for awareness and improvement. The process was friendly, inclusive, and aimed at building trust within the community.</p>
-  </section>
+  <form
+  action="https://formspree.io/f/mkgzgbbp"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <input type="text" name="message">
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+  
+    
 </main>
 <footer class="main-footer">
   <span>Every drop counts - together we ensure purity in every peril.</span>
 </footer>
 <script src="script.js"></script>
 </body>
-</html> 
+</html>
