@@ -1,16 +1,19 @@
-/* --- Orange Theme Revamp --- */
+/* --- Modernized Interface Enhancements --- */
 :root {
-  --primary: #ff7300;
-  --primary-dark: #d95a00;
-  --accent: #ffb347;
-  --bg: #fff8f0;
-  --header-bg: linear-gradient(90deg, #1100ff70 0%, #fff047f7 100%);
-  --section-bg: #fff3e0;
+  --primary: #2563eb; /* Modern blue */
+  --primary-dark: #1e40af;
+  --accent: #fbbf24; /* Soft yellow */
+  --accent-light: #fef9c3;
+  --bg: #f8fafc;
+  --header-bg: linear-gradient(90deg, #2563eb 0%, #fbbf24 100%);
+  --section-bg: #fff;
   --card-bg: #fff;
-  --card-shadow: 0 4px 16px rgba(255, 115, 0, 0.10);
-  --text: #222;
+  --card-shadow: 0 4px 24px rgba(37, 99, 235, 0.08);
+  --text: #1e293b;
   --nav-link: #fff;
-  --nav-link-hover: #ffb347;
+  --nav-link-hover: #fbbf24;
+  --border-radius: 16px;
+  --transition: 0.3s cubic-bezier(.4,0,.2,1);
 }
 
 body {
@@ -19,37 +22,42 @@ body {
   color: var(--text);
   margin: 0;
   padding: 0;
+  line-height: 1.7;
 }
 
 header {
   background: var(--header-bg);
   color: var(--nav-link);
-  padding: 20px;
+  padding: 14px 0 8px 0;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(255, 115, 0, 0.08);
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.08);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
-  padding: 8px 0;
+  gap: 4px;
+  padding: 4px 0 0 0;
 }
 nav a {
   color: var(--nav-link);
-  margin: 0 6px;
+  margin: 0 2px;
   text-decoration: none;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background 0.2s, color 0.2s;
-  font-size: 1em;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: var(--border-radius);
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  font-size: 0.95em;
   white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.04);
 }
 nav a:hover, nav a.active {
   background: var(--nav-link-hover);
   color: var(--primary-dark);
+  box-shadow: 0 4px 16px rgba(251, 191, 36, 0.15);
 }
 
 /* --- Responsive Navigation Bar --- */
@@ -80,8 +88,8 @@ nav a:hover, nav a.active {
 }
 
 main {
-  padding: 32px 16px;
-  max-width: 900px;
+  padding: 40px 8vw 32px 8vw;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -90,14 +98,19 @@ main {
   align-items: center;
   justify-content: center;
   background: var(--section-bg);
-  padding: 20px;
+  padding: 32px 16px;
   text-align: center;
   flex-wrap: wrap;
   border-bottom: 3px solid var(--primary);
+  border-radius: var(--border-radius);
+  margin: 24px 0 0 0;
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.06);
 }
 .college-logo {
-  height: 90px;
-  margin-right: 24px;
+  height: 100px;
+  margin-right: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
 }
 .college-info h2, .college-name {
   color: var(--primary-dark);
@@ -148,54 +161,55 @@ main {
   margin: 18px 0 0 0;
 }
 .join-btn {
+  display: inline-block;
   background: var(--primary);
   color: #fff;
-  padding: 12px 32px;
-  border-radius: 20px;
-  text-decoration: none;
+  padding: 14px 36px;
+  border-radius: 32px;
+  font-size: 1.2em;
   font-weight: bold;
-  margin-top: 28px;
-  font-size: 18px;
-  box-shadow: 0 2px 8px rgba(255, 115, 0, 0.15);
-  transition: background 0.2s, box-shadow 0.2s;
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
+  margin-top: 24px;
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.10);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 .join-btn:hover {
-  background: var(--primary-dark);
-  box-shadow: 0 4px 16px rgba(255, 115, 0, 0.25);
+  background: var(--accent);
+  color: var(--primary-dark);
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(251, 191, 36, 0.18);
 }
 
 .section {
   background: var(--section-bg);
-  border-radius: 18px;
-  margin: 32px auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.06);
+  margin-bottom: 32px;
   padding: 32px 24px;
-  box-shadow: 0 2px 12px rgba(255, 115, 0, 0.07);
 }
 
 /* --- Card Layout --- */
 .week-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 32px;
   justify-content: center;
-  margin-top: 24px;
 }
 .card {
   background: var(--card-bg);
-  border-radius: 16px;
+  border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  width: 320px;
+  margin: 0 0 16px 0;
   overflow: hidden;
-  width: 270px;
-  transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 220px;
 }
 .card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(255, 115, 0, 0.18);
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
 }
 .card img {
   width: 100%;
@@ -204,17 +218,16 @@ main {
   border-bottom: 3px solid var(--primary);
 }
 .card-content {
-  padding: 18px 14px 14px 14px;
-  text-align: left;
+  padding: 24px 20px 20px 20px;
 }
 .card-content h3 {
-  color: var(--primary-dark);
-  margin: 0 0 8px 0;
-  font-size: 20px;
+  margin-top: 0;
+  color: var(--primary);
+  font-size: 1.25em;
 }
 .card-content p {
-  color: #444;
-  font-size: 15px;
+  color: #475569;
+  font-size: 1em;
 }
 
 /* --- Feedback Form --- */
@@ -269,7 +282,7 @@ form button:hover, form button:focus {
     align-items: center;
   }
   .card {
-    width: 90vw;
+    width: 95vw;
     max-width: 350px;
   }
   main, .section {
@@ -306,6 +319,25 @@ form button:hover, form button:focus {
   background-attachment: fixed;
 }
 
+/* --- Parallax Banner --- */
+.main-banner.bg-orange-img {
+  background: linear-gradient(120deg, #ff7300 60%, #ffb347 100%);
+  background-size: cover;
+  background-position: center;
+  min-height: 320px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .main-banner.bg-orange-img {
+    background-attachment: scroll;
+  }
+}
+
 /* --- Fade-in Animation for Cards --- */
 .fade-in {
   opacity: 0;
@@ -318,16 +350,15 @@ form button:hover, form button:focus {
 
 /* --- Main Footer Styling --- */
 .main-footer {
-  background: var(--header-bg);
+  background: var(--primary-dark);
   color: #fff;
   text-align: center;
-  padding: 24px 0 16px 0;
-  font-size: 1.2em;
-  font-weight: bold;
-  letter-spacing: 1px;
+  padding: 24px 0;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  font-size: 1.1em;
   margin-top: 40px;
-  border-top: 4px solid var(--primary);
-  box-shadow: 0 -2px 12px rgba(255, 115, 0, 0.08);
+  letter-spacing: 0.5px;
 }
 
 /* --- Extra spacing between sections and footer --- */
@@ -437,4 +468,22 @@ form input:hover, form textarea:hover {
   .gallery-card img {
     height: 140px;
   }
+}
+
+/* Image scroll-in animation */
+.scroll-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.scroll-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
